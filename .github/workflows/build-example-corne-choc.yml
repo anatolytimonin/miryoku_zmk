@@ -10,7 +10,7 @@ jobs:
     with:
       board: '["nice_nano_v2"]'
       alphas: '["QWERTY"]'
-      shield: '["choc-corne_left","choc-corne_right"]'
+      shield: '["corne_left","corne_right"]'
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
       kconfig: '["CONFIG_ZMK_MOUSE=y"]'
