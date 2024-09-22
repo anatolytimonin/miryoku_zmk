@@ -1,7 +1,7 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: 'Build Example choc-corne nice_nano_v2 QWERTY vi mouse-move'
+name: 'Build Example choc-corne nice-nano-v2 QWERTY vi mouse-move'
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
@@ -9,7 +9,7 @@ jobs:
     secrets: inherit
     with:
       board: '["nice_nano_v2"]'
-      shield: '["choc-corne_left","choc-corne_right"]'
+      shield: '["choc_corne_left","choc_corne_right"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
