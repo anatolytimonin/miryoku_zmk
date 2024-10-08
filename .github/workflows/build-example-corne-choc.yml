@@ -12,6 +12,6 @@ jobs:
       shield: '["corne_left","corne_right"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
-      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
+      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR", "#define HRM_ORDER_GASC"]'
       kconfig: '["CONFIG_ZMK_MOUSE=y"]'
       branches: '["petejohanson/zmk/feat/pointers-move-scroll"]'
