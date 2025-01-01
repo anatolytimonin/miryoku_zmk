@@ -1,7 +1,7 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: 'Build Example choc-corne nice-nano-v2 QWERTY vi mouse-move'
+name: 'Build Example choc-corne nice-nano-v2 QWERTY vi mouse-move passkey'
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
@@ -13,5 +13,5 @@ jobs:
       alphas: '["QWERTY"]'
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR", "#define HRM_ORDER_GASC"]'
-      kconfig: '["CONFIG_ZMK_MOUSE=y"]'
+      kconfig: '["CONFIG_ZMK_MOUSE=y", "CONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
       branches: '["petejohanson/zmk/feat/pointers-move-scroll"]'
