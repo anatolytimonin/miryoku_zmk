@@ -14,4 +14,4 @@ jobs:
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define HRM_ORDER_GASC"]'
       kconfig: '["CONFIG_ZMK_MOUSE=y\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
-      branches: '["petejohanson/zmk/feat/pointers-move-scroll"]'
+      branches: '["main"]'
