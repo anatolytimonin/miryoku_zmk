@@ -14,4 +14,4 @@ jobs:
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define HRM_ORDER_GASC"]'
       kconfig: '["CONFIG_ZMK_POINTING=y\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
-      branches: '["main"]'
+      branches: '["https://github.com/zmkfirmware/zmk/main"]'
