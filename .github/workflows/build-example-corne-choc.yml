@@ -2,11 +2,10 @@
 # https://github.com/manna-harbour/miryoku
 
 name: 'Build Example choc-corne nice-nano-v2 QWERTY vi mouse-move passkey'
-on: [push, pull_request, workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 jobs:
   build:
     uses: ./.github/workflows/main.yml
-
     secrets: inherit
     with:
       board: '["nice_nano_v2"]'
