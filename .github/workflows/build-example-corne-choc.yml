@@ -13,5 +13,5 @@ jobs:
       alphas: '["QWERTY"]'
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define HRM_ORDER_GASC"]'
-      kconfig: '["CONFIG_ZMK_MOUSE=y\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
+      kconfig: '["CONFIG_ZMK_POINTING=y\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
       branches: '["main"]'
