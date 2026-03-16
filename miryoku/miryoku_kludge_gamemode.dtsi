@@ -1,0 +1,19 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+// GameMode: combo Sym+Num+Fun (left three thumbs) -> &mo U_GAME.
+
+#if defined (MIRYOKU_KLUDGE_GAMEMODE) && defined (MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS)
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+    gamemode_combo {
+      key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
+      bindings = <&mo U_GAME>;
+      timeout-ms = <200>;
+      layers = <U_BASE U_EXTRA>;
+    };
+  };
+};
+
+#endif

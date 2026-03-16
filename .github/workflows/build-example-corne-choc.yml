@@ -12,6 +12,6 @@ jobs:
       shield: '["corne_left","corne_right"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
-      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define HRM_ORDER_GASC"]'
+      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define HRM_ORDER_GASC\n#define MIRYOKU_KLUDGE_GAMEMODE"]'
       kconfig: '["CONFIG_ZMK_POINTING=y\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
 
