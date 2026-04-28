@@ -102,7 +102,7 @@ For onboard controller keyboards (keyboards with an integrated controller), ente
 
 For split onboard controller keyboards (keyboards with an integrated controller on each side), enter the keyboard side name, e.g. ~corneish_zen_v1_left~, ~corneish_zen_v1_right~.  To build both sides in the same run, enter both keyboard side names separated by a comma, e.g. ~corneish_zen_v1_left,corneish_zen_v1_right~.
 
-For composite keyboards (keyboards with a separate controller), enter the controller name, e.g. ~nice_nano~, ~nice_nano_v2~, ~seeeduino_xiao~, ~seeeduino_xiao_ble~.  Also specify the [[#shield][shield]].
+For composite keyboards (keyboards with a separate controller), enter the controller name, e.g. ~nice_nano~, ~nice_nano@1.0.0~ (Nice!Nano v1), ~seeeduino_xiao~, ~seeeduino_xiao_ble~.  Also specify the [[#shield][shield]].
 
 
 ****** shield
