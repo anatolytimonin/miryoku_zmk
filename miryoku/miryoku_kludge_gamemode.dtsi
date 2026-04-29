@@ -5,16 +5,45 @@
 #if defined (MIRYOKU_KLUDGE_GAMEMODE) && defined (MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS)
 
 / {
+  behaviors {
+    tog_game_on: tog_game_on {
+      compatible = "zmk,behavior-toggle-layer";
+      #binding-cells = <1>;
+      toggle-mode = "on";
+      locking;
+    };
+
+    tog_game_off: tog_game_off {
+      compatible = "zmk,behavior-toggle-layer";
+      #binding-cells = <1>;
+      toggle-mode = "off";
+      locking;
+    };
+  };
+
   combos {
     compatible = "zmk,combos";
-    gamemode_combo {
+
+    gamemode_combo_on {
       key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
-      bindings = <&mo U_GAME>;
-      // GameMode should activate immediately from the base/extra chord.
-      // Keep the combo window tiny so it resolves before thumb hold-taps
-      // switch into U_SYM/U_NUM/U_FUN layers.
-      timeout-ms = <20>;
-      layers = <U_BASE U_EXTRA>;
+      // Toggle GameMode when the 3-thumb chord is pressed.
+      // Base/other -> Game.
+      bindings = <&tog_game_on U_GAME>;
+      // When holding Sym+Num+Fun together, make sure combo resolves before
+      // the thumb hold-taps fully commit, and keep GameMode active while
+      // all three keys are held.
+      timeout-ms = <50>;
+      // Allow the combo to be evaluated regardless of which layer the thumb
+      // hold-taps might have temporarily selected.
+      layers = <U_BASE U_EXTRA U_NUM U_SYM U_FUN>;
+    };
+
+    gamemode_combo_off {
+      key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
+      // Game -> Base/other.
+      bindings = <&tog_game_off U_GAME>;
+      timeout-ms = <50>;
+      layers = <U_GAME>;
     };
   };
 };
