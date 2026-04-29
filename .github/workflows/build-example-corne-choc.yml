@@ -8,10 +8,11 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["nice_nano"]'
+      board: '["nice_nano_v2"]'
       shield: '["corne_left","corne_right"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
+      branches: '["zmkfirmware/zmk/v0.3.0"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define HRM_ORDER_GASC\n#define MIRYOKU_KLUDGE_GAMEMODE"]'
       kconfig: '["CONFIG_ZMK_POINTING=y\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y"]'
 
