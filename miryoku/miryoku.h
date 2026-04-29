@@ -38,3 +38,7 @@
 #else
   #include "miryoku_behaviors.h"
 #endif
+
+#if defined (MIRYOKU_KLUDGE_GAMEMODE)
+#include "miryoku_kludge_gamemode.h"
+#endif

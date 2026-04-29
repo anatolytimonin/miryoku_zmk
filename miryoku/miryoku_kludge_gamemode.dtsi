@@ -1,0 +1,30 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+// GameMode: configured combo -> Game/Base.
+
+#if defined (MIRYOKU_KLUDGE_GAMEMODE) && defined (MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS)
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+
+    gamemode_combo_on {
+      key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
+      // Toggle GameMode when the configured chord is pressed.
+      // Base/other -> Game (disable other non-default layers).
+      bindings = <&to U_GAME>;
+      timeout-ms = <50>;
+      layers = <U_BASE U_EXTRA U_NUM U_SYM U_FUN>;
+    };
+
+    gamemode_combo_off {
+      key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
+      // Game -> Base (disable other non-default layers).
+      bindings = <&to U_BASE>;
+      timeout-ms = <50>;
+      layers = <U_GAME>;
+    };
+  };
+};
+
+#endif
