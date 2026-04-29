@@ -1,6 +1,6 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
-// GameMode: combo Sym+Num+Fun (left three thumbs) -> &mo U_GAME.
+// GameMode: configured combo -> Game/Base.
 
 #if defined (MIRYOKU_KLUDGE_GAMEMODE) && defined (MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS)
 
@@ -10,15 +10,10 @@
 
     gamemode_combo_on {
       key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
-      // Toggle GameMode when the 3-thumb chord is pressed.
+      // Toggle GameMode when the configured chord is pressed.
       // Base/other -> Game (disable other non-default layers).
       bindings = <&to U_GAME>;
-      // When holding Sym+Num+Fun together, make sure combo resolves before
-      // the thumb hold-taps fully commit, and keep GameMode active while
-      // all three keys are held.
       timeout-ms = <50>;
-      // Allow the combo to be evaluated regardless of which layer the thumb
-      // hold-taps might have temporarily selected.
       layers = <U_BASE U_EXTRA U_NUM U_SYM U_FUN>;
     };
 
