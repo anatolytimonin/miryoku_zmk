@@ -10,7 +10,10 @@
     gamemode_combo {
       key-positions = <MIRYOKU_KLUDGE_GAMEMODE_LEFT_THUMBS>;
       bindings = <&mo U_GAME>;
-      timeout-ms = <200>;
+      // GameMode should activate immediately from the base/extra chord.
+      // Keep the combo window tiny so it resolves before thumb hold-taps
+      // switch into U_SYM/U_NUM/U_FUN layers.
+      timeout-ms = <20>;
       layers = <U_BASE U_EXTRA>;
     };
   };
